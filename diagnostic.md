@@ -6,21 +6,22 @@ Record your responses inside the fenced code blocks below each question.
     and what are the main task(s) you perform inside an Ember Route?
 
     ```md
-    <!-- your response here -->
+    <!-- The router is the file that the file path for each view state and creates the name for the URL to reach those states. The route file define the actions available on that view state and defines what data will display upon loading that view. -->
     ```
 
 1.  What is the command to generate a route named `boston` nested under
     `campus`?
 
     ```md
-    <!-- your response here -->
+    <!-- ember generate route campus/boston -->
     ```
 
 1.  Suppose you have a nested route at the URL `/campus/boston`. How would you
     use the `link-to` helper to generate an appropriate link?
 
     ```md
-    <!-- your response here -->
+    <!-- Link-to is what we use to define a connection between two different files.
+    For example in the campus file {{link-to "boston"}}Boston{{/link-to}} would take you to the Boston page. {{link-to "campus"}}Return the main page{{/link-to}} if i put this on the boston page it would take me back to campus.-->
     ```
 
 1.  Explain **at least** two differences between the following two route
@@ -35,7 +36,7 @@ Record your responses inside the fenced code blocks below each question.
     ```
 
     ```md
-    <!-- your response here -->
+    <!-- The first one is defining the nested routes in two lines versus defining the whole path and ID in one line. I am honestly not sure what another major difference is, my only guess would be that maybe the second one would be more limited in how it can be referenced? -->
     ```
 
 1.  Suppose we have the following route definition:
@@ -48,11 +49,13 @@ Record your responses inside the fenced code blocks below each question.
     value `'123'` inside a Route?
 
     ```md
-    <!-- your response here -->
+    <!-- model(params) {
+    return this.get('store').findRecord('list', params.movie_id);
+  } I am not sure if you were asking for something like this. I know this was what we used to call the List ID in the list route in order for the create and destroy functions to work correctly. ,-->
     ```
 
 1.  Inside a template, how do we reference data provided by a Route?
 
     ```md
-    <!-- your response here -->
+    <!-- I assume this is done through defining what the model is, and creating a link to the functions definied in the route. This way we can call the action on the data avaiable.  -->
     ```
